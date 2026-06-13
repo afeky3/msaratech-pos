@@ -1,0 +1,25 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "39cb385f-78d4-c646-aab3-cc5268424118++7229",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+    "39cb385f-78d4-c646-aab3-cc5268424118++7229" : {
+
+    }
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "39cb385f-78d4-c646-aab3-cc5268424118++7229" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "5E0CF32D-2977-438A-860E-39FAA50634B5",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "39cb385f-78d4-c646-aab3-cc5268424118++7229" : "PrinterCheck\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "Printer",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Printer.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/www.femtoapps.cn:3888\/svn\/ios",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Subversion",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "39cb385f-78d4-c646-aab3-cc5268424118++7229"
+    }
+  ]
+}

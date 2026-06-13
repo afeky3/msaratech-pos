@@ -1,0 +1,894 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1839F1021CB3D01D000D7D23 /* TSCCommandVc.m in Sources */ = {isa = PBXBuildFile; fileRef = 1839F1011CB3D01D000D7D23 /* TSCCommandVc.m */; };
+		184D17481CBB58050001D98E /* BLEManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 184D17421CBB58050001D98E /* BLEManager.m */; };
+		184D17491CBB58050001D98E /* POSBLEManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 184D17441CBB58050001D98E /* POSBLEManager.m */; };
+		184D174A1CBB58050001D98E /* POSWIFIManagerAsync.m in Sources */ = {isa = PBXBuildFile; fileRef = 184D17471CBB58050001D98E /* POSWIFIManagerAsync.m */; };
+		1894E7A11CAAA60E006FCDE4 /* WIFIInputVc.m in Sources */ = {isa = PBXBuildFile; fileRef = 1894E7A01CAAA60E006FCDE4 /* WIFIInputVc.m */; };
+		18AE38351CA29D0400DCFCDE /* POSInputVc.m in Sources */ = {isa = PBXBuildFile; fileRef = 18AE38341CA29D0400DCFCDE /* POSInputVc.m */; };
+		18BFEA871C9F916000E45C1F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 18BFEA861C9F916000E45C1F /* main.m */; };
+		18BFEA8A1C9F916000E45C1F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 18BFEA891C9F916000E45C1F /* AppDelegate.m */; };
+		18BFEA8D1C9F916000E45C1F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18BFEA8C1C9F916000E45C1F /* ViewController.m */; };
+		18BFEA901C9F916000E45C1F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18BFEA8E1C9F916000E45C1F /* Main.storyboard */; };
+		18BFEA921C9F916000E45C1F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18BFEA911C9F916000E45C1F /* Assets.xcassets */; };
+		18BFEA951C9F916000E45C1F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18BFEA931C9F916000E45C1F /* LaunchScreen.storyboard */; };
+		18BFEAA01C9F916000E45C1F /* PrinterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 18BFEA9F1C9F916000E45C1F /* PrinterTests.m */; };
+		18BFEAAB1C9F916000E45C1F /* PrinterUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 18BFEAAA1C9F916000E45C1F /* PrinterUITests.m */; };
+		18BFEAC81C9FCEFA00E45C1F /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18BFEAC71C9FCEFA00E45C1F /* CoreBluetooth.framework */; };
+		18BFEAD11C9FF42B00E45C1F /* ConnectVc.m in Sources */ = {isa = PBXBuildFile; fileRef = 18BFEAD01C9FF42B00E45C1F /* ConnectVc.m */; };
+		18BFEAF31CA00EF300E45C1F /* IQKeyboardManager.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 18BFEADD1CA00EF300E45C1F /* IQKeyboardManager.bundle */; };
+		18BFEAF41CA00EF300E45C1F /* IQKeyboardManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 18BFEADF1CA00EF300E45C1F /* IQKeyboardManager.m */; };
+		18BFEAF51CA00EF300E45C1F /* IQSegmentedNextPrevious.m in Sources */ = {isa = PBXBuildFile; fileRef = 18BFEAE31CA00EF300E45C1F /* IQSegmentedNextPrevious.m */; };
+		18BFEAF61CA00EF300E45C1F /* IQTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18BFEAE51CA00EF300E45C1F /* IQTextView.m */; };
+		18BFEAF71CA00EF300E45C1F /* IQTitleBarButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 18BFEAE71CA00EF300E45C1F /* IQTitleBarButtonItem.m */; };
+		18BFEAF81CA00EF300E45C1F /* IQToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = 18BFEAE91CA00EF300E45C1F /* IQToolbar.m */; };
+		18BFEAF91CA00EF300E45C1F /* NSArray+Sort.m in Sources */ = {isa = PBXBuildFile; fileRef = 18BFEAEC1CA00EF300E45C1F /* NSArray+Sort.m */; };
+		18BFEAFA1CA00EF300E45C1F /* UIView+Hierarchy.m in Sources */ = {isa = PBXBuildFile; fileRef = 18BFEAEE1CA00EF300E45C1F /* UIView+Hierarchy.m */; };
+		18BFEAFB1CA00EF300E45C1F /* UIView+IQKeyboardToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = 18BFEAF01CA00EF300E45C1F /* UIView+IQKeyboardToolbar.m */; };
+		18BFEAFC1CA00EF300E45C1F /* UIWindow+Hierarchy.m in Sources */ = {isa = PBXBuildFile; fileRef = 18BFEAF21CA00EF300E45C1F /* UIWindow+Hierarchy.m */; };
+		18C45BF71CA0E262001F2FCC /* MBProgressHUD+Add.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C45BF31CA0E262001F2FCC /* MBProgressHUD+Add.m */; };
+		18C45BF81CA0E262001F2FCC /* MBProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 18C45BF41CA0E262001F2FCC /* MBProgressHUD.bundle */; };
+		18C45BF91CA0E262001F2FCC /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C45BF61CA0E262001F2FCC /* MBProgressHUD.m */; };
+		18C45C3C1CA14322001F2FCC /* POSTestVc.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C45C3B1CA14322001F2FCC /* POSTestVc.m */; };
+		18E462F71CA4CE0700F8DACE /* AsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E462F41CA4CE0700F8DACE /* AsyncSocket.m */; };
+		18E462F81CA4CE0700F8DACE /* AsyncUdpSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E462F61CA4CE0700F8DACE /* AsyncUdpSocket.m */; };
+		18E462FA1CA515DE00F8DACE /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18E462F91CA515DE00F8DACE /* CFNetwork.framework */; };
+		18E462FC1CA5425700F8DACE /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18E462FB1CA5425700F8DACE /* SystemConfiguration.framework */; };
+		2E64D6901CD34E080009D102 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E64D68F1CD34E080009D102 /* MainViewController.m */; };
+		350E0FA226366CBF00C7DCFF /* SwiftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350E0FA126366CBF00C7DCFF /* SwiftViewController.swift */; };
+		3536F827276890AA00D5396F /* PrinterManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3536F826276890AA00D5396F /* PrinterManager.m */; };
+		353BB8C126396050003CED81 /* Documentation.html in Resources */ = {isa = PBXBuildFile; fileRef = 353BB8BC2639604F003CED81 /* Documentation.html */; };
+		353BB8C226396050003CED81 /* GCDAsyncUdpSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 353BB8BD2639604F003CED81 /* GCDAsyncUdpSocket.m */; };
+		353BB8C326396050003CED81 /* GCDAsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 353BB8BE2639604F003CED81 /* GCDAsyncSocket.m */; };
+		3549851526A8156D0047D0EA /* MyBluetoothDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = 3549851426A8156D0047D0EA /* MyBluetoothDevice.m */; };
+		3549851826A815C50047D0EA /* BTDeviceCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3549851726A815C50047D0EA /* BTDeviceCell.m */; };
+		355F12A329553B78006A16AB /* POSWIFIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 355F12A229553B78006A16AB /* POSWIFIManager.m */; };
+		35F4B35A295069D50063967C /* WifiTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F4B359295069D50063967C /* WifiTest.swift */; };
+		35F4B35D29506D0A0063967C /* WifiManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 35F4B35C29506D0A0063967C /* WifiManager.m */; };
+		35F8266A27F5AADE0063595D /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F8266927F5AADE0063595D /* TestViewController.swift */; };
+		9BA6FF3D1D3E312E005EA527 /* TscCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BA6FF3C1D3E312E005EA527 /* TscCommand.m */; };
+		9BA6FF401D3E3163005EA527 /* PosCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BA6FF3F1D3E3163005EA527 /* PosCommand.m */; };
+		9BA6FF431D3E3181005EA527 /* ImageTranster.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BA6FF421D3E3181005EA527 /* ImageTranster.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		18BFEA9C1C9F916000E45C1F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 18BFEA7A1C9F916000E45C1F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 18BFEA811C9F916000E45C1F;
+			remoteInfo = Printer;
+		};
+		18BFEAA71C9F916000E45C1F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 18BFEA7A1C9F916000E45C1F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 18BFEA811C9F916000E45C1F;
+			remoteInfo = Printer;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1839F1001CB3D01D000D7D23 /* TSCCommandVc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSCCommandVc.h; sourceTree = "<group>"; };
+		1839F1011CB3D01D000D7D23 /* TSCCommandVc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSCCommandVc.m; sourceTree = "<group>"; };
+		184D17411CBB58050001D98E /* BLEManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLEManager.h; sourceTree = "<group>"; };
+		184D17421CBB58050001D98E /* BLEManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLEManager.m; sourceTree = "<group>"; };
+		184D17431CBB58050001D98E /* POSBLEManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = POSBLEManager.h; sourceTree = "<group>"; };
+		184D17441CBB58050001D98E /* POSBLEManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = POSBLEManager.m; sourceTree = "<group>"; };
+		184D17451CBB58050001D98E /* POSSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = POSSDK.h; sourceTree = "<group>"; };
+		184D17461CBB58050001D98E /* POSWIFIManagerAsync.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = POSWIFIManagerAsync.h; sourceTree = "<group>"; };
+		184D17471CBB58050001D98E /* POSWIFIManagerAsync.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = POSWIFIManagerAsync.m; sourceTree = "<group>"; };
+		1894E79F1CAAA60E006FCDE4 /* WIFIInputVc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WIFIInputVc.h; sourceTree = "<group>"; };
+		1894E7A01CAAA60E006FCDE4 /* WIFIInputVc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WIFIInputVc.m; sourceTree = "<group>"; };
+		18AE38331CA29D0400DCFCDE /* POSInputVc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = POSInputVc.h; sourceTree = "<group>"; };
+		18AE38341CA29D0400DCFCDE /* POSInputVc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = POSInputVc.m; sourceTree = "<group>"; };
+		18BFEA821C9F916000E45C1F /* Printer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Printer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		18BFEA861C9F916000E45C1F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		18BFEA881C9F916000E45C1F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		18BFEA891C9F916000E45C1F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		18BFEA8B1C9F916000E45C1F /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		18BFEA8C1C9F916000E45C1F /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		18BFEA8F1C9F916000E45C1F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		18BFEA911C9F916000E45C1F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		18BFEA941C9F916000E45C1F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		18BFEA961C9F916000E45C1F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		18BFEA9B1C9F916000E45C1F /* PrinterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PrinterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		18BFEA9F1C9F916000E45C1F /* PrinterTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PrinterTests.m; sourceTree = "<group>"; };
+		18BFEAA11C9F916000E45C1F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		18BFEAA61C9F916000E45C1F /* PrinterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PrinterUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		18BFEAAA1C9F916000E45C1F /* PrinterUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PrinterUITests.m; sourceTree = "<group>"; };
+		18BFEAAC1C9F916000E45C1F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		18BFEAC71C9FCEFA00E45C1F /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
+		18BFEACF1C9FF42B00E45C1F /* ConnectVc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConnectVc.h; sourceTree = "<group>"; };
+		18BFEAD01C9FF42B00E45C1F /* ConnectVc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConnectVc.m; sourceTree = "<group>"; };
+		18BFEADD1CA00EF300E45C1F /* IQKeyboardManager.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = IQKeyboardManager.bundle; sourceTree = "<group>"; };
+		18BFEADE1CA00EF300E45C1F /* IQKeyboardManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IQKeyboardManager.h; sourceTree = "<group>"; };
+		18BFEADF1CA00EF300E45C1F /* IQKeyboardManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IQKeyboardManager.m; sourceTree = "<group>"; };
+		18BFEAE01CA00EF300E45C1F /* IQKeyboardManagerConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IQKeyboardManagerConstants.h; sourceTree = "<group>"; };
+		18BFEAE11CA00EF300E45C1F /* IQKeyboardManagerConstantsInternal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IQKeyboardManagerConstantsInternal.h; sourceTree = "<group>"; };
+		18BFEAE21CA00EF300E45C1F /* IQSegmentedNextPrevious.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IQSegmentedNextPrevious.h; sourceTree = "<group>"; };
+		18BFEAE31CA00EF300E45C1F /* IQSegmentedNextPrevious.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IQSegmentedNextPrevious.m; sourceTree = "<group>"; };
+		18BFEAE41CA00EF300E45C1F /* IQTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IQTextView.h; sourceTree = "<group>"; };
+		18BFEAE51CA00EF300E45C1F /* IQTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IQTextView.m; sourceTree = "<group>"; };
+		18BFEAE61CA00EF300E45C1F /* IQTitleBarButtonItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IQTitleBarButtonItem.h; sourceTree = "<group>"; };
+		18BFEAE71CA00EF300E45C1F /* IQTitleBarButtonItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IQTitleBarButtonItem.m; sourceTree = "<group>"; };
+		18BFEAE81CA00EF300E45C1F /* IQToolbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IQToolbar.h; sourceTree = "<group>"; };
+		18BFEAE91CA00EF300E45C1F /* IQToolbar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IQToolbar.m; sourceTree = "<group>"; };
+		18BFEAEA1CA00EF300E45C1F /* KeyboardManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeyboardManager.h; sourceTree = "<group>"; };
+		18BFEAEB1CA00EF300E45C1F /* NSArray+Sort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Sort.h"; sourceTree = "<group>"; };
+		18BFEAEC1CA00EF300E45C1F /* NSArray+Sort.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Sort.m"; sourceTree = "<group>"; };
+		18BFEAED1CA00EF300E45C1F /* UIView+Hierarchy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Hierarchy.h"; sourceTree = "<group>"; };
+		18BFEAEE1CA00EF300E45C1F /* UIView+Hierarchy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Hierarchy.m"; sourceTree = "<group>"; };
+		18BFEAEF1CA00EF300E45C1F /* UIView+IQKeyboardToolbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+IQKeyboardToolbar.h"; sourceTree = "<group>"; };
+		18BFEAF01CA00EF300E45C1F /* UIView+IQKeyboardToolbar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+IQKeyboardToolbar.m"; sourceTree = "<group>"; };
+		18BFEAF11CA00EF300E45C1F /* UIWindow+Hierarchy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWindow+Hierarchy.h"; sourceTree = "<group>"; };
+		18BFEAF21CA00EF300E45C1F /* UIWindow+Hierarchy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWindow+Hierarchy.m"; sourceTree = "<group>"; };
+		18C45BF01CA0E155001F2FCC /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		18C45BF21CA0E262001F2FCC /* MBProgressHUD+Add.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+Add.h"; sourceTree = "<group>"; };
+		18C45BF31CA0E262001F2FCC /* MBProgressHUD+Add.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+Add.m"; sourceTree = "<group>"; };
+		18C45BF41CA0E262001F2FCC /* MBProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MBProgressHUD.bundle; sourceTree = "<group>"; };
+		18C45BF51CA0E262001F2FCC /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		18C45BF61CA0E262001F2FCC /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		18C45C3A1CA14321001F2FCC /* POSTestVc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = POSTestVc.h; sourceTree = "<group>"; };
+		18C45C3B1CA14322001F2FCC /* POSTestVc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = POSTestVc.m; sourceTree = "<group>"; };
+		18E462F31CA4CE0700F8DACE /* AsyncSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AsyncSocket.h; sourceTree = "<group>"; };
+		18E462F41CA4CE0700F8DACE /* AsyncSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AsyncSocket.m; sourceTree = "<group>"; };
+		18E462F51CA4CE0700F8DACE /* AsyncUdpSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AsyncUdpSocket.h; sourceTree = "<group>"; };
+		18E462F61CA4CE0700F8DACE /* AsyncUdpSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AsyncUdpSocket.m; sourceTree = "<group>"; };
+		18E462F91CA515DE00F8DACE /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		18E462FB1CA5425700F8DACE /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		2E64D68E1CD34E080009D102 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		2E64D68F1CD34E080009D102 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		350E0FA026366CBF00C7DCFF /* Printer-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Printer-Bridging-Header.h"; sourceTree = "<group>"; };
+		350E0FA126366CBF00C7DCFF /* SwiftViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftViewController.swift; sourceTree = "<group>"; };
+		3536F825276890AA00D5396F /* PrinterManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrinterManager.h; sourceTree = "<group>"; };
+		3536F826276890AA00D5396F /* PrinterManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PrinterManager.m; sourceTree = "<group>"; };
+		353BB8BC2639604F003CED81 /* Documentation.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = Documentation.html; sourceTree = "<group>"; };
+		353BB8BD2639604F003CED81 /* GCDAsyncUdpSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDAsyncUdpSocket.m; sourceTree = "<group>"; };
+		353BB8BE2639604F003CED81 /* GCDAsyncSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDAsyncSocket.m; sourceTree = "<group>"; };
+		353BB8BF2639604F003CED81 /* GCDAsyncUdpSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDAsyncUdpSocket.h; sourceTree = "<group>"; };
+		353BB8C02639604F003CED81 /* GCDAsyncSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDAsyncSocket.h; sourceTree = "<group>"; };
+		3549851326A8156D0047D0EA /* MyBluetoothDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyBluetoothDevice.h; sourceTree = "<group>"; };
+		3549851426A8156D0047D0EA /* MyBluetoothDevice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyBluetoothDevice.m; sourceTree = "<group>"; };
+		3549851626A815C50047D0EA /* BTDeviceCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTDeviceCell.h; sourceTree = "<group>"; };
+		3549851726A815C50047D0EA /* BTDeviceCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTDeviceCell.m; sourceTree = "<group>"; };
+		355F12A129553B78006A16AB /* POSWIFIManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = POSWIFIManager.h; sourceTree = "<group>"; };
+		355F12A229553B78006A16AB /* POSWIFIManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = POSWIFIManager.m; sourceTree = "<group>"; };
+		35EA011A263AA01000A58592 /* libPosPrintiOSSdk.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libPosPrintiOSSdk.a; path = ../../IOSPrintsdk/libPosPrintiOSSdk.a; sourceTree = "<group>"; };
+		35F4B359295069D50063967C /* WifiTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WifiTest.swift; sourceTree = "<group>"; };
+		35F4B35B29506D0A0063967C /* WifiManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WifiManager.h; sourceTree = "<group>"; };
+		35F4B35C29506D0A0063967C /* WifiManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WifiManager.m; sourceTree = "<group>"; };
+		35F8266927F5AADE0063595D /* TestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
+		9BA6FF3B1D3E312E005EA527 /* TscCommand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TscCommand.h; sourceTree = "<group>"; };
+		9BA6FF3C1D3E312E005EA527 /* TscCommand.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TscCommand.m; sourceTree = "<group>"; };
+		9BA6FF3E1D3E3163005EA527 /* PosCommand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PosCommand.h; sourceTree = "<group>"; };
+		9BA6FF3F1D3E3163005EA527 /* PosCommand.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PosCommand.m; sourceTree = "<group>"; };
+		9BA6FF411D3E3181005EA527 /* ImageTranster.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageTranster.h; sourceTree = "<group>"; };
+		9BA6FF421D3E3181005EA527 /* ImageTranster.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageTranster.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		18BFEA7F1C9F916000E45C1F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				18E462FC1CA5425700F8DACE /* SystemConfiguration.framework in Frameworks */,
+				18E462FA1CA515DE00F8DACE /* CFNetwork.framework in Frameworks */,
+				18BFEAC81C9FCEFA00E45C1F /* CoreBluetooth.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		18BFEA981C9F916000E45C1F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		18BFEAA31C9F916000E45C1F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		18AD557E1CB75B390014BA2C /* WIFIVc */ = {
+			isa = PBXGroup;
+			children = (
+				18BFEACF1C9FF42B00E45C1F /* ConnectVc.h */,
+				18BFEAD01C9FF42B00E45C1F /* ConnectVc.m */,
+				1894E79F1CAAA60E006FCDE4 /* WIFIInputVc.h */,
+				1894E7A01CAAA60E006FCDE4 /* WIFIInputVc.m */,
+				1839F1001CB3D01D000D7D23 /* TSCCommandVc.h */,
+				1839F1011CB3D01D000D7D23 /* TSCCommandVc.m */,
+			);
+			name = WIFIVc;
+			sourceTree = "<group>";
+		};
+		18AD557F1CB75B680014BA2C /* BLEVc */ = {
+			isa = PBXGroup;
+			children = (
+				18C45C3A1CA14321001F2FCC /* POSTestVc.h */,
+				18C45C3B1CA14322001F2FCC /* POSTestVc.m */,
+				18AE38331CA29D0400DCFCDE /* POSInputVc.h */,
+				18AE38341CA29D0400DCFCDE /* POSInputVc.m */,
+			);
+			name = BLEVc;
+			sourceTree = "<group>";
+		};
+		18BFEA791C9F916000E45C1F = {
+			isa = PBXGroup;
+			children = (
+				18E462FB1CA5425700F8DACE /* SystemConfiguration.framework */,
+				18E462F91CA515DE00F8DACE /* CFNetwork.framework */,
+				18BFEAC71C9FCEFA00E45C1F /* CoreBluetooth.framework */,
+				18BFEA841C9F916000E45C1F /* Printer */,
+				18BFEA9E1C9F916000E45C1F /* PrinterTests */,
+				18BFEAA91C9F916000E45C1F /* PrinterUITests */,
+				18BFEA831C9F916000E45C1F /* Products */,
+				35EA0119263AA01000A58592 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		18BFEA831C9F916000E45C1F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				18BFEA821C9F916000E45C1F /* Printer.app */,
+				18BFEA9B1C9F916000E45C1F /* PrinterTests.xctest */,
+				18BFEAA61C9F916000E45C1F /* PrinterUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		18BFEA841C9F916000E45C1F /* Printer */ = {
+			isa = PBXGroup;
+			children = (
+				2E64D68E1CD34E080009D102 /* MainViewController.h */,
+				2E64D68F1CD34E080009D102 /* MainViewController.m */,
+				3549851626A815C50047D0EA /* BTDeviceCell.h */,
+				3549851726A815C50047D0EA /* BTDeviceCell.m */,
+				3549851326A8156D0047D0EA /* MyBluetoothDevice.h */,
+				3549851426A8156D0047D0EA /* MyBluetoothDevice.m */,
+				18BFEAB81C9F91BC00E45C1F /* Framework */,
+				18BFEA8B1C9F916000E45C1F /* ViewController.h */,
+				18BFEA8C1C9F916000E45C1F /* ViewController.m */,
+				18AD557F1CB75B680014BA2C /* BLEVc */,
+				18AD557E1CB75B390014BA2C /* WIFIVc */,
+				18BFEA8E1C9F916000E45C1F /* Main.storyboard */,
+				18BFEA881C9F916000E45C1F /* AppDelegate.h */,
+				35EA0111263A4D4400A58592 /* Swift */,
+				18BFEA891C9F916000E45C1F /* AppDelegate.m */,
+				18BFEA911C9F916000E45C1F /* Assets.xcassets */,
+				18BFEA931C9F916000E45C1F /* LaunchScreen.storyboard */,
+				18BFEA961C9F916000E45C1F /* Info.plist */,
+				18BFEAC31C9FAB6500E45C1F /* Tools */,
+				18BFEA851C9F916000E45C1F /* Supporting Files */,
+				350E0FA026366CBF00C7DCFF /* Printer-Bridging-Header.h */,
+			);
+			path = Printer;
+			sourceTree = "<group>";
+		};
+		18BFEA851C9F916000E45C1F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				18BFEA861C9F916000E45C1F /* main.m */,
+				18C45BF01CA0E155001F2FCC /* PrefixHeader.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		18BFEA9E1C9F916000E45C1F /* PrinterTests */ = {
+			isa = PBXGroup;
+			children = (
+				18BFEA9F1C9F916000E45C1F /* PrinterTests.m */,
+				18BFEAA11C9F916000E45C1F /* Info.plist */,
+			);
+			path = PrinterTests;
+			sourceTree = "<group>";
+		};
+		18BFEAA91C9F916000E45C1F /* PrinterUITests */ = {
+			isa = PBXGroup;
+			children = (
+				18BFEAAA1C9F916000E45C1F /* PrinterUITests.m */,
+				18BFEAAC1C9F916000E45C1F /* Info.plist */,
+			);
+			path = PrinterUITests;
+			sourceTree = "<group>";
+		};
+		18BFEAB81C9F91BC00E45C1F /* Framework */ = {
+			isa = PBXGroup;
+			children = (
+				18C45BF11CA0E262001F2FCC /* MBProgressHUD */,
+				18BFEADC1CA00EF300E45C1F /* IQKeyBoardManager */,
+			);
+			path = Framework;
+			sourceTree = "<group>";
+		};
+		18BFEAC31C9FAB6500E45C1F /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				353BB8BB2639604F003CED81 /* GCD */,
+				18E462F21CA4CDFB00F8DACE /* AsyncSocket */,
+				184D17411CBB58050001D98E /* BLEManager.h */,
+				184D17421CBB58050001D98E /* BLEManager.m */,
+				184D17431CBB58050001D98E /* POSBLEManager.h */,
+				184D17441CBB58050001D98E /* POSBLEManager.m */,
+				184D17451CBB58050001D98E /* POSSDK.h */,
+				184D17461CBB58050001D98E /* POSWIFIManagerAsync.h */,
+				184D17471CBB58050001D98E /* POSWIFIManagerAsync.m */,
+				355F12A129553B78006A16AB /* POSWIFIManager.h */,
+				355F12A229553B78006A16AB /* POSWIFIManager.m */,
+				9BA6FF3B1D3E312E005EA527 /* TscCommand.h */,
+				9BA6FF3C1D3E312E005EA527 /* TscCommand.m */,
+				9BA6FF3E1D3E3163005EA527 /* PosCommand.h */,
+				9BA6FF3F1D3E3163005EA527 /* PosCommand.m */,
+				9BA6FF411D3E3181005EA527 /* ImageTranster.h */,
+				9BA6FF421D3E3181005EA527 /* ImageTranster.m */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		18BFEADC1CA00EF300E45C1F /* IQKeyBoardManager */ = {
+			isa = PBXGroup;
+			children = (
+				18BFEADD1CA00EF300E45C1F /* IQKeyboardManager.bundle */,
+				18BFEADE1CA00EF300E45C1F /* IQKeyboardManager.h */,
+				18BFEADF1CA00EF300E45C1F /* IQKeyboardManager.m */,
+				18BFEAE01CA00EF300E45C1F /* IQKeyboardManagerConstants.h */,
+				18BFEAE11CA00EF300E45C1F /* IQKeyboardManagerConstantsInternal.h */,
+				18BFEAE21CA00EF300E45C1F /* IQSegmentedNextPrevious.h */,
+				18BFEAE31CA00EF300E45C1F /* IQSegmentedNextPrevious.m */,
+				18BFEAE41CA00EF300E45C1F /* IQTextView.h */,
+				18BFEAE51CA00EF300E45C1F /* IQTextView.m */,
+				18BFEAE61CA00EF300E45C1F /* IQTitleBarButtonItem.h */,
+				18BFEAE71CA00EF300E45C1F /* IQTitleBarButtonItem.m */,
+				18BFEAE81CA00EF300E45C1F /* IQToolbar.h */,
+				18BFEAE91CA00EF300E45C1F /* IQToolbar.m */,
+				18BFEAEA1CA00EF300E45C1F /* KeyboardManager.h */,
+				18BFEAEB1CA00EF300E45C1F /* NSArray+Sort.h */,
+				18BFEAEC1CA00EF300E45C1F /* NSArray+Sort.m */,
+				18BFEAED1CA00EF300E45C1F /* UIView+Hierarchy.h */,
+				18BFEAEE1CA00EF300E45C1F /* UIView+Hierarchy.m */,
+				18BFEAEF1CA00EF300E45C1F /* UIView+IQKeyboardToolbar.h */,
+				18BFEAF01CA00EF300E45C1F /* UIView+IQKeyboardToolbar.m */,
+				18BFEAF11CA00EF300E45C1F /* UIWindow+Hierarchy.h */,
+				18BFEAF21CA00EF300E45C1F /* UIWindow+Hierarchy.m */,
+			);
+			path = IQKeyBoardManager;
+			sourceTree = "<group>";
+		};
+		18C45BF11CA0E262001F2FCC /* MBProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				18C45BF21CA0E262001F2FCC /* MBProgressHUD+Add.h */,
+				18C45BF31CA0E262001F2FCC /* MBProgressHUD+Add.m */,
+				18C45BF41CA0E262001F2FCC /* MBProgressHUD.bundle */,
+				18C45BF51CA0E262001F2FCC /* MBProgressHUD.h */,
+				18C45BF61CA0E262001F2FCC /* MBProgressHUD.m */,
+			);
+			path = MBProgressHUD;
+			sourceTree = "<group>";
+		};
+		18E462F21CA4CDFB00F8DACE /* AsyncSocket */ = {
+			isa = PBXGroup;
+			children = (
+				18E462F31CA4CE0700F8DACE /* AsyncSocket.h */,
+				18E462F41CA4CE0700F8DACE /* AsyncSocket.m */,
+				18E462F51CA4CE0700F8DACE /* AsyncUdpSocket.h */,
+				18E462F61CA4CE0700F8DACE /* AsyncUdpSocket.m */,
+			);
+			name = AsyncSocket;
+			path = ../Framework;
+			sourceTree = "<group>";
+		};
+		353BB8BB2639604F003CED81 /* GCD */ = {
+			isa = PBXGroup;
+			children = (
+				353BB8BC2639604F003CED81 /* Documentation.html */,
+				3536F825276890AA00D5396F /* PrinterManager.h */,
+				3536F826276890AA00D5396F /* PrinterManager.m */,
+				353BB8BE2639604F003CED81 /* GCDAsyncSocket.m */,
+				353BB8C02639604F003CED81 /* GCDAsyncSocket.h */,
+				353BB8BD2639604F003CED81 /* GCDAsyncUdpSocket.m */,
+				353BB8BF2639604F003CED81 /* GCDAsyncUdpSocket.h */,
+				35F4B35B29506D0A0063967C /* WifiManager.h */,
+				35F4B35C29506D0A0063967C /* WifiManager.m */,
+			);
+			path = GCD;
+			sourceTree = "<group>";
+		};
+		35EA0111263A4D4400A58592 /* Swift */ = {
+			isa = PBXGroup;
+			children = (
+				350E0FA126366CBF00C7DCFF /* SwiftViewController.swift */,
+				35F8266927F5AADE0063595D /* TestViewController.swift */,
+				35F4B359295069D50063967C /* WifiTest.swift */,
+			);
+			name = Swift;
+			sourceTree = "<group>";
+		};
+		35EA0119263AA01000A58592 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				35EA011A263AA01000A58592 /* libPosPrintiOSSdk.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		18BFEA811C9F916000E45C1F /* Printer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 18BFEAAF1C9F916000E45C1F /* Build configuration list for PBXNativeTarget "Printer" */;
+			buildPhases = (
+				18BFEA7E1C9F916000E45C1F /* Sources */,
+				18BFEA7F1C9F916000E45C1F /* Frameworks */,
+				18BFEA801C9F916000E45C1F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Printer;
+			productName = Printer;
+			productReference = 18BFEA821C9F916000E45C1F /* Printer.app */;
+			productType = "com.apple.product-type.application";
+		};
+		18BFEA9A1C9F916000E45C1F /* PrinterTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 18BFEAB21C9F916000E45C1F /* Build configuration list for PBXNativeTarget "PrinterTests" */;
+			buildPhases = (
+				18BFEA971C9F916000E45C1F /* Sources */,
+				18BFEA981C9F916000E45C1F /* Frameworks */,
+				18BFEA991C9F916000E45C1F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				18BFEA9D1C9F916000E45C1F /* PBXTargetDependency */,
+			);
+			name = PrinterTests;
+			productName = PrinterTests;
+			productReference = 18BFEA9B1C9F916000E45C1F /* PrinterTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		18BFEAA51C9F916000E45C1F /* PrinterUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 18BFEAB51C9F916000E45C1F /* Build configuration list for PBXNativeTarget "PrinterUITests" */;
+			buildPhases = (
+				18BFEAA21C9F916000E45C1F /* Sources */,
+				18BFEAA31C9F916000E45C1F /* Frameworks */,
+				18BFEAA41C9F916000E45C1F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				18BFEAA81C9F916000E45C1F /* PBXTargetDependency */,
+			);
+			name = PrinterUITests;
+			productName = PrinterUITests;
+			productReference = 18BFEAA61C9F916000E45C1F /* PrinterUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		18BFEA7A1C9F916000E45C1F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = Admin;
+				TargetAttributes = {
+					18BFEA811C9F916000E45C1F = {
+						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = HCR8KQPRXW;
+						LastSwiftMigration = 1240;
+						ProvisioningStyle = Automatic;
+					};
+					18BFEA9A1C9F916000E45C1F = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = 18BFEA811C9F916000E45C1F;
+					};
+					18BFEAA51C9F916000E45C1F = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = 18BFEA811C9F916000E45C1F;
+					};
+				};
+			};
+			buildConfigurationList = 18BFEA7D1C9F916000E45C1F /* Build configuration list for PBXProject "Printer" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				English,
+				en,
+				Base,
+			);
+			mainGroup = 18BFEA791C9F916000E45C1F;
+			productRefGroup = 18BFEA831C9F916000E45C1F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				18BFEA811C9F916000E45C1F /* Printer */,
+				18BFEA9A1C9F916000E45C1F /* PrinterTests */,
+				18BFEAA51C9F916000E45C1F /* PrinterUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		18BFEA801C9F916000E45C1F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				18BFEA951C9F916000E45C1F /* LaunchScreen.storyboard in Resources */,
+				353BB8C126396050003CED81 /* Documentation.html in Resources */,
+				18BFEA921C9F916000E45C1F /* Assets.xcassets in Resources */,
+				18C45BF81CA0E262001F2FCC /* MBProgressHUD.bundle in Resources */,
+				18BFEAF31CA00EF300E45C1F /* IQKeyboardManager.bundle in Resources */,
+				18BFEA901C9F916000E45C1F /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		18BFEA991C9F916000E45C1F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		18BFEAA41C9F916000E45C1F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		18BFEA7E1C9F916000E45C1F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				35F4B35A295069D50063967C /* WifiTest.swift in Sources */,
+				18BFEAF91CA00EF300E45C1F /* NSArray+Sort.m in Sources */,
+				18BFEAFC1CA00EF300E45C1F /* UIWindow+Hierarchy.m in Sources */,
+				18BFEAF41CA00EF300E45C1F /* IQKeyboardManager.m in Sources */,
+				18BFEAD11C9FF42B00E45C1F /* ConnectVc.m in Sources */,
+				18BFEAF81CA00EF300E45C1F /* IQToolbar.m in Sources */,
+				184D174A1CBB58050001D98E /* POSWIFIManagerAsync.m in Sources */,
+				18BFEA8D1C9F916000E45C1F /* ViewController.m in Sources */,
+				9BA6FF3D1D3E312E005EA527 /* TscCommand.m in Sources */,
+				18C45BF91CA0E262001F2FCC /* MBProgressHUD.m in Sources */,
+				1839F1021CB3D01D000D7D23 /* TSCCommandVc.m in Sources */,
+				18C45BF71CA0E262001F2FCC /* MBProgressHUD+Add.m in Sources */,
+				353BB8C326396050003CED81 /* GCDAsyncSocket.m in Sources */,
+				18E462F81CA4CE0700F8DACE /* AsyncUdpSocket.m in Sources */,
+				9BA6FF431D3E3181005EA527 /* ImageTranster.m in Sources */,
+				35F4B35D29506D0A0063967C /* WifiManager.m in Sources */,
+				3549851826A815C50047D0EA /* BTDeviceCell.m in Sources */,
+				18BFEAF71CA00EF300E45C1F /* IQTitleBarButtonItem.m in Sources */,
+				18BFEA8A1C9F916000E45C1F /* AppDelegate.m in Sources */,
+				18BFEAFB1CA00EF300E45C1F /* UIView+IQKeyboardToolbar.m in Sources */,
+				3549851526A8156D0047D0EA /* MyBluetoothDevice.m in Sources */,
+				353BB8C226396050003CED81 /* GCDAsyncUdpSocket.m in Sources */,
+				3536F827276890AA00D5396F /* PrinterManager.m in Sources */,
+				355F12A329553B78006A16AB /* POSWIFIManager.m in Sources */,
+				18BFEAF51CA00EF300E45C1F /* IQSegmentedNextPrevious.m in Sources */,
+				9BA6FF401D3E3163005EA527 /* PosCommand.m in Sources */,
+				18E462F71CA4CE0700F8DACE /* AsyncSocket.m in Sources */,
+				2E64D6901CD34E080009D102 /* MainViewController.m in Sources */,
+				18AE38351CA29D0400DCFCDE /* POSInputVc.m in Sources */,
+				18C45C3C1CA14322001F2FCC /* POSTestVc.m in Sources */,
+				184D17481CBB58050001D98E /* BLEManager.m in Sources */,
+				350E0FA226366CBF00C7DCFF /* SwiftViewController.swift in Sources */,
+				18BFEAFA1CA00EF300E45C1F /* UIView+Hierarchy.m in Sources */,
+				1894E7A11CAAA60E006FCDE4 /* WIFIInputVc.m in Sources */,
+				184D17491CBB58050001D98E /* POSBLEManager.m in Sources */,
+				18BFEAF61CA00EF300E45C1F /* IQTextView.m in Sources */,
+				35F8266A27F5AADE0063595D /* TestViewController.swift in Sources */,
+				18BFEA871C9F916000E45C1F /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		18BFEA971C9F916000E45C1F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				18BFEAA01C9F916000E45C1F /* PrinterTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		18BFEAA21C9F916000E45C1F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				18BFEAAB1C9F916000E45C1F /* PrinterUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		18BFEA9D1C9F916000E45C1F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 18BFEA811C9F916000E45C1F /* Printer */;
+			targetProxy = 18BFEA9C1C9F916000E45C1F /* PBXContainerItemProxy */;
+		};
+		18BFEAA81C9F916000E45C1F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 18BFEA811C9F916000E45C1F /* Printer */;
+			targetProxy = 18BFEAA71C9F916000E45C1F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		18BFEA8E1C9F916000E45C1F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				18BFEA8F1C9F916000E45C1F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		18BFEA931C9F916000E45C1F /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				18BFEA941C9F916000E45C1F /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		18BFEAAD1C9F916000E45C1F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Guangqin Li (25CBLNUB24)";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		18BFEAAE1C9F916000E45C1F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		18BFEAB01C9F916000E45C1F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 20;
+				DEVELOPMENT_TEAM = HCR8KQPRXW;
+				ENABLE_BITCODE = NO;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/Printer/PrefixHeader.pch";
+				INFOPLIST_FILE = Printer/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Printer/Framework",
+					"$(PROJECT_DIR)/Printer",
+				);
+				MARKETING_VERSION = 1.2.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.printer.iosdemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "Printer/Printer-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		18BFEAB11C9F916000E45C1F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 20;
+				DEVELOPMENT_TEAM = HCR8KQPRXW;
+				ENABLE_BITCODE = NO;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/Printer/PrefixHeader.pch";
+				INFOPLIST_FILE = Printer/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Printer/Framework",
+					"$(PROJECT_DIR)/Printer",
+				);
+				MARKETING_VERSION = 1.2.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.printer.iosdemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "Printer/Printer-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		18BFEAB31C9F916000E45C1F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = PrinterTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.femto.PrinterTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Printer.app/Printer";
+			};
+			name = Debug;
+		};
+		18BFEAB41C9F916000E45C1F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = PrinterTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.femto.PrinterTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Printer.app/Printer";
+			};
+			name = Release;
+		};
+		18BFEAB61C9F916000E45C1F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = PrinterUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.femto.PrinterUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Printer;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		18BFEAB71C9F916000E45C1F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = PrinterUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.femto.PrinterUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Printer;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		18BFEA7D1C9F916000E45C1F /* Build configuration list for PBXProject "Printer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				18BFEAAD1C9F916000E45C1F /* Debug */,
+				18BFEAAE1C9F916000E45C1F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		18BFEAAF1C9F916000E45C1F /* Build configuration list for PBXNativeTarget "Printer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				18BFEAB01C9F916000E45C1F /* Debug */,
+				18BFEAB11C9F916000E45C1F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		18BFEAB21C9F916000E45C1F /* Build configuration list for PBXNativeTarget "PrinterTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				18BFEAB31C9F916000E45C1F /* Debug */,
+				18BFEAB41C9F916000E45C1F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		18BFEAB51C9F916000E45C1F /* Build configuration list for PBXNativeTarget "PrinterUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				18BFEAB61C9F916000E45C1F /* Debug */,
+				18BFEAB71C9F916000E45C1F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 18BFEA7A1C9F916000E45C1F /* Project object */;
+}

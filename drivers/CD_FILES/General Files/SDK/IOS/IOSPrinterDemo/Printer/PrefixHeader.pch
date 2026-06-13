@@ -1,0 +1,24 @@
+//
+//  PrefixHeader.pch
+//  Printer
+//
+//  Created by apple on 16/3/22.
+//  Copyright © 2016年 Admin. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#ifdef DEBUG
+#define DEbugLog(...) NSLog(__VA_ARGS__)
+#define DEbugMethod() NSLog(@"%s", __func__)
+#else
+#define DEbugLog(...)
+#define DEbugMethod()
+#endif
+
+#import "MBProgressHUD+Add.h"
+#endif /* PrefixHeader_pch */

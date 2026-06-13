@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>BLEManagerDelegate Protocol Reference</title>
+
+	<link rel="stylesheet" href="../css/style.css">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1.4">
+	<meta name="generator" content="appledoc 2.2.1 (build 1334)">
+</head>
+<body class="appledoc">
+	<header>
+		<div class="container" class="hide-in-xcode">
+			
+			<h1 id="library-title">
+				<a href="../index.html">IOS-SDK </a>
+			</h1>
+
+			<p id="developer-home">
+				<a href="../index.html">Printer</a>
+			</p>
+			
+		</div>
+	</header>
+
+	<aside>
+		<div class="container">
+			<nav>
+				<ul id="header-buttons" role="toolbar">
+					<li><a href="../index.html">Index</a></li>
+<li><a href="../hierarchy.html">Hierarchy</a></li>
+
+					<li id="on-this-page" role="navigation">
+						<label>
+							On This Page
+
+							<div class="chevron">
+								<div class="chevy chevron-left"></div>
+								<div class="chevy chevron-right"></div>
+							</div>
+
+							<select id="jump-to">
+	<option value="top">Jump To&#133;</option>
+	
+	<option value="overview">Overview</option>
+	
+
+	
+	
+	<option value="tasks">Tasks</option>
+	
+	
+
+	
+	
+
+	
+
+	
+	<optgroup label="Instance Methods">
+		
+		<option value="//api/name/BLEManagerDelegate:connectPeripheral:">- BLEManagerDelegate:connectPeripheral:</option>
+		
+		<option value="//api/name/BLEManagerDelegate:didFailToConnectPeripheral:error:">- BLEManagerDelegate:didFailToConnectPeripheral:error:</option>
+		
+		<option value="//api/name/BLEManagerDelegate:didWriteValueForCharacteristic:error:">- BLEManagerDelegate:didWriteValueForCharacteristic:error:</option>
+		
+		<option value="//api/name/BLEManagerDelegate:disconnectPeripheral:isAutoDisconnect:">- BLEManagerDelegate:disconnectPeripheral:isAutoDisconnect:</option>
+		
+		<option value="//api/name/BLEManagerDelegate:updatePeripheralList:RSSIList:">- BLEManagerDelegate:updatePeripheralList:RSSIList:</option>
+		
+	</optgroup>
+	
+	
+</select>
+						</label>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</aside>
+
+	<article>
+		<div id="overview_contents" class="container">
+			<div id="content">
+				<main role="main">
+					<h1 class="title">BLEManagerDelegate Protocol Reference</h1>
+
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<th>Conforms to</th>
+	<td>NSObject</td>
+</tr><tr>
+	<th>Declared in</th>
+	<td>BLEManager.h</td>
+</tr>
+						</tbody></table></div>
+					
+
+                    
+					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<p>Define the proxy BLEManagerDelegate</p>
+					</div>
+					
+					
+
+					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						
+
+						
+						
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/BLEManagerDelegate:updatePeripheralList:RSSIList:" title="BLEManagerDelegate:updatePeripheralList:RSSIList:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/BLEManagerDelegate:updatePeripheralList:RSSIList:">&ndash;&nbsp;BLEManagerDelegate:updatePeripheralList:RSSIList:</a></code>
+<span class="task-item-suffix">required method</span></h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Discovery of peripherals</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)BLEManagerDelegate:(BLEManager *)<em>BLEmanager</em> updatePeripheralList:(NSArray *)<em>peripherals</em> RSSIList:(NSArray *)<em>RSSIArr</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>BLEmanager</code></th>
+						<td><p>Bluetooth management object</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>peripherals</code></th>
+						<td><p>array of peripherals</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>RSSIArr</code></th>
+						<td><p>list of printers' rssi</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Discovery of peripherals</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">BLEManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/BLEManagerDelegate:connectPeripheral:" title="BLEManagerDelegate:connectPeripheral:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/BLEManagerDelegate:connectPeripheral:">&ndash;&nbsp;BLEManagerDelegate:connectPeripheral:</a></code>
+<span class="task-item-suffix">required method</span></h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>connection succeeded</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)BLEManagerDelegate:(BLEManager *)<em>BLEmanager</em> connectPeripheral:(CBPeripheral *)<em>peripheral</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>BLEmanager</code></th>
+						<td><p>Bluetooth management object</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>peripheral</code></th>
+						<td><p>peripheral</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>connection succeeded</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">BLEManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/BLEManagerDelegate:disconnectPeripheral:isAutoDisconnect:" title="BLEManagerDelegate:disconnectPeripheral:isAutoDisconnect:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/BLEManagerDelegate:disconnectPeripheral:isAutoDisconnect:">&ndash;&nbsp;BLEManagerDelegate:disconnectPeripheral:isAutoDisconnect:</a></code>
+<span class="task-item-suffix">required method</span></h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Disconnect</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)BLEManagerDelegate:(BLEManager *)<em>BLEmanager</em> disconnectPeripheral:(CBPeripheral *)<em>peripheral</em> isAutoDisconnect:(BOOL)<em>isAutoDisconnect</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>BLEmanager</code></th>
+						<td><p>Bluetooth management object</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>peripheral</code></th>
+						<td><p>peripheral</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>isAutoDisconnect</code></th>
+						<td><p>Whether to automatically disconnect</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Disconnect</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">BLEManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/BLEManagerDelegate:didFailToConnectPeripheral:error:" title="BLEManagerDelegate:didFailToConnectPeripheral:error:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/BLEManagerDelegate:didFailToConnectPeripheral:error:">&ndash;&nbsp;BLEManagerDelegate:didFailToConnectPeripheral:error:</a></code>
+<span class="task-item-suffix">required method</span></h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Failed to connect to device</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)BLEManagerDelegate:(BLEManager *)<em>BLEmanager</em> didFailToConnectPeripheral:(CBPeripheral *)<em>peripheral</em> error:(NSError *)<em>error</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>BLEmanager</code></th>
+						<td><p>Bluetooth management object</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>peripheral</code></th>
+						<td><p>peripheral</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>error</code></th>
+						<td><p>error</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Failed to connect to device</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">BLEManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/BLEManagerDelegate:didWriteValueForCharacteristic:error:" title="BLEManagerDelegate:didWriteValueForCharacteristic:error:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/BLEManagerDelegate:didWriteValueForCharacteristic:error:">&ndash;&nbsp;BLEManagerDelegate:didWriteValueForCharacteristic:error:</a></code>
+<span class="task-item-suffix">required method</span></h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Send data successfully</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)BLEManagerDelegate:(BLEManager *)<em>BLEmanager</em> didWriteValueForCharacteristic:(CBCharacteristic *)<em>character</em> error:(NSError *)<em>error</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>BLEmanager</code></th>
+						<td><p>Bluetooth management object</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>character</code></th>
+						<td><p>characters of bluetooth device</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>error</code></th>
+						<td><p>error</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Send data successfully</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">BLEManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+					</div>
+					
+					
+
+                    
+                    
+          
+				</main>
+
+				<footer>
+					<div class="footer-copyright">
+						
+					
+					</div>
+				</footer>
+			</div>
+		</div>
+	</article>
+
+	<script src="../js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,12 @@
+{
+  "name": "pos-system",
+  "version": "1.0.0",
+  "description": "Teddy POS - Point of Sale for Teeddy Bear store",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
