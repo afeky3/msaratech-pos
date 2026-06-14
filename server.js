@@ -337,8 +337,6 @@ app.post('/api/order', async (req, res) => {
 });
 
 app.get('/api/orders-history', (req, res) => {
-  const role = req.query.role;
-  if (role !== 'admin') return res.json({ orders: [] });
   const history = readJSON('orders-history.json') || [];
   res.json({ orders: history });
 });
@@ -540,6 +538,17 @@ app.post('/api/shopify-config', (req, res) => {
   res.json({ ok: true });
 });
 
+app.get('/api/locations', async (req, res) => {
+  const config = readJSON('shopify-config.json');
+  if (!config || !config.token) return res.json({ locations: [] });
+  try {
+    const result = await shopifyRequest('GET', '/locations.json');
+    const locations = (result.data && result.data.locations) || [];
+    const mapped = locations.map(l => ({ id: String(l.id), name: l.name }));
+    res.json({ locations: mapped });
+  } catch { res.json({ locations: [] }); }
+});
+
 app.post('/api/shopify-sync', async (req, res) => {
   let config = readJSON('shopify-config.json');
   if (!config || !config.token) return res.status(400).json({ error: 'Not connected to Shopify' });
@@ -593,17 +602,45 @@ app.post('/api/shopify-sync', async (req, res) => {
       }
     }
 
-    // Fetch location if missing
-    if (!config.locationId) {
-      try {
-        const locResult = await shopifyRequest('GET', '/locations.json');
-        if (locResult.data && locResult.data.locations && locResult.data.locations.length > 0) {
-          config.locationId = String(locResult.data.locations[0].id);
-          writeJSON('shopify-config.json', config);
-        }
-      } catch {}
+    // Fetch all locations
+    let locations = [];
+    try {
+      const locResult = await shopifyRequest('GET', '/locations.json');
+      if (locResult.data && locResult.data.locations) {
+        locations = locResult.data.locations.map(l => ({ id: String(l.id), name: l.name }));
+      }
+    } catch {}
+
+    if (!config.locationId && locations.length > 0) {
+      config.locationId = locations[0].id;
+      writeJSON('shopify-config.json', config);
     }
 
+    // Fetch inventory levels per location for all products
+    const locationIds = locations.map(l => l.id);
+    if (locationIds.length > 0) {
+      const inventoryItemIds = allProducts.map(p => p.inventoryItemId).filter(Boolean);
+      const batchSize = 50;
+      for (let i = 0; i < inventoryItemIds.length; i += batchSize) {
+        const batch = inventoryItemIds.slice(i, i + batchSize);
+        try {
+          const invResult = await shopifyRequest('GET',
+            `/inventory_levels.json?inventory_item_ids=${batch.join(',')}&location_ids=${locationIds.join(',')}&limit=250`
+          );
+          const levels = (invResult.data && invResult.data.inventory_levels) || [];
+          for (const level of levels) {
+            const product = allProducts.find(p => p.inventoryItemId === level.inventory_item_id);
+            if (product) {
+              if (!product.locationStock) product.locationStock = {};
+              product.locationStock[String(level.location_id)] = level.available || 0;
+            }
+          }
+        } catch {}
+      }
+    }
+
+    // Save locations list
+    writeJSON('locations.json', locations);
     writeJSON('shopify-products.json', allProducts);
     res.json({ ok: true, count: allProducts.length });
   } catch (e) {

@@ -364,6 +364,7 @@ html, body {
         </div>
       </div>
       <div class="cats" id="catsBar"></div>
+      <div class="cats" id="locationBar" style="border-bottom:1px solid var(--border)"></div>
       <div class="prod-grid" id="prodGrid"><div class="spinner"></div></div>
     </div>
 
@@ -611,6 +612,8 @@ const STAFF = [ { id:1, name:'Admin', role:'admin' }, { id:2, name:'Cashier', ro
 let products       = [];
 let cart           = [];
 let activeCat      = 'All';
+let activeLocation = 'All';
+let locations      = [];
 let selectedPay    = 'cash';
 let currentUser    = null;
 let shiftData      = null;
@@ -621,6 +624,11 @@ let selectedUserId = null;
 let pinEntry       = '';
 let bcBuffer       = '';
 let bcTimer        = null;
+
+const LOCATION_LABELS = {
+  '74563846371': 'Warehouse 1',
+  '89114411235': 'Store'
+};
 
 // ══════════════════════════════════════════════════════
 // CLOCK
@@ -796,7 +804,13 @@ async function lookupBarcode(code) {
 async function loadProducts() {
   const r = await api('GET', '/api/products');
   products = await r.json();
+  try {
+    const lr = await api('GET', '/api/locations');
+    const ld = await lr.json();
+    locations = ld.locations || [];
+  } catch { locations = []; }
   buildCats();
+  buildLocationFilter();
   renderProducts();
 }
 
@@ -808,19 +822,44 @@ function buildCats() {
 
 function setCat(c) { activeCat = c; buildCats(); renderProducts(); }
 
+function buildLocationFilter() {
+  const bar = document.getElementById('locationBar');
+  if (!bar) return;
+  const items = [{ id: 'All', label: 'All Locations' }];
+  locations.forEach(l => items.push({ id: l.id, label: LOCATION_LABELS[l.id] || l.name }));
+  bar.innerHTML = items.map(i =>
+    `<button class="cat-pill${i.id===activeLocation?' on':''}" onclick="setLocation('${i.id}')">${i.label}</button>`).join('');
+}
+
+function setLocation(id) { activeLocation = id; buildLocationFilter(); renderProducts(); }
+
 function renderProducts() {
   const q = (document.getElementById('searchInput').value || '').toLowerCase();
   const list = products.filter(p => {
     const catOk = activeCat === 'All' || p.category === activeCat;
     const qOk   = !q || p.title.toLowerCase().includes(q) || (p.titleAr||'').includes(q) || (p.barcode||'').toLowerCase().includes(q) || (p.sku||'').toLowerCase().includes(q);
-    return catOk && qOk;
+    let locOk = true;
+    if (activeLocation !== 'All' && p.locationStock) {
+      locOk = (p.locationStock[activeLocation] || 0) > 0;
+    }
+    return catOk && qOk && locOk;
   });
   const grid = document.getElementById('prodGrid');
   if (!list.length) {
     grid.innerHTML = '<div style="color:var(--muted);padding:20px;grid-column:1/-1;text-align:center">No products found</div>';
     return;
   }
-  grid.innerHTML = list.map(p => `
+  grid.innerHTML = list.map(p => {
+    let stockInfo = '';
+    if (p.locationStock && locations.length > 0) {
+      stockInfo = locations.map(l => {
+        const qty = p.locationStock[l.id] || 0;
+        const label = LOCATION_LABELS[l.id] || l.name;
+        const color = qty > 0 ? 'var(--accent)' : 'var(--muted)';
+        return `<span style="font-size:.6rem;color:${color}">${label}: ${qty}</span>`;
+      }).join(' · ');
+    }
+    return `
     <div class="prod-card" onclick="addToCart(${p.id})">
       <div class="prod-badge">${p.category}</div>
       ${p.image
@@ -829,8 +868,10 @@ function renderProducts() {
       <div class="prod-name">${p.title}</div>
       ${p.titleAr ? `<div class="prod-name-ar">${p.titleAr}</div>` : ''}
       ${p.sku ? `<div style="font-size:.65rem;color:var(--muted);text-align:center">${p.sku}</div>` : ''}
+      ${stockInfo ? `<div style="text-align:center;line-height:1.4;margin-top:2px">${stockInfo}</div>` : ''}
       <div class="prod-price">EGP ${p.price.toFixed(2)}</div>
-    </div>`).join('');
+    </div>`;
+  }).join('');
 }
 
 // ══════════════════════════════════════════════════════
@@ -1520,28 +1561,20 @@ async function openHistoryModal() {
   document.getElementById('historySearchInput').value = '';
   const list = document.getElementById('historyList');
 
-  if (currentUser && currentUser.role === 'admin') {
-    list.innerHTML = '<div class="spinner"></div>';
-    try {
-      const r = await api('GET', '/api/orders-history?role=admin');
-      const d = await r.json();
-      historyCache = d.orders || [];
-      renderHistoryList(historyCache);
-    } catch { list.innerHTML = '<div style="color:var(--red)">Failed to load history</div>'; }
-  } else {
-    list.innerHTML = '<div style="color:var(--muted);text-align:center;padding:30px">Enter an order reference number above to search.</div>';
-  }
+  list.innerHTML = '<div class="spinner"></div>';
+  try {
+    const r = await api('GET', '/api/orders-history');
+    const d = await r.json();
+    historyCache = d.orders || [];
+    renderHistoryList(historyCache);
+  } catch { list.innerHTML = '<div style="color:var(--red)">Failed to load history</div>'; }
 }
 
 async function searchOrderHistory() {
   const ref = document.getElementById('historySearchInput').value.trim();
   const list = document.getElementById('historyList');
   if (!ref) {
-    if (currentUser && currentUser.role === 'admin') {
-      renderHistoryList(historyCache);
-    } else {
-      list.innerHTML = '<div style="color:var(--muted);text-align:center;padding:30px">Enter an order reference number to search.</div>';
-    }
+    renderHistoryList(historyCache);
     return;
   }
   list.innerHTML = '<div class="spinner"></div>';
