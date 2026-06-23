@@ -1159,7 +1159,21 @@ async function doPrint() {
   const ok = await confirmOrder();
   if (!ok) return;
   document.getElementById('printArea').innerHTML = buildPrintHTML(lastOrder);
-  setTimeout(() => { window.print(); toast('Print dialog opened', 'success'); }, 80);
+  await waitForImages(document.getElementById('printArea'));
+  window.print();
+  toast('Print dialog opened', 'success');
+}
+
+function waitForImages(container) {
+  const imgs = container.querySelectorAll('img');
+  if (!imgs.length) return Promise.resolve();
+  return Promise.all(Array.from(imgs).map(img => {
+    if (img.complete) return Promise.resolve();
+    return new Promise(resolve => {
+      img.onload = resolve;
+      img.onerror = resolve;
+    });
+  }));
 }
 
 async function newOrder() {
@@ -1240,7 +1254,7 @@ function printShiftReport(s) {
     <div class="d"></div>
     <div class="c">End of Report</div>`;
 
-  setTimeout(() => window.print(), 80);
+  window.print();
 }
 
 // ══════════════════════════════════════════════════════
@@ -1303,7 +1317,8 @@ function testPrint() {
     <div class="c" style="font-size:10px">Printer: ${activePrinter}</div>
     <div class="d"></div>
     <div class="c">✓ OK</div>`;
-  setTimeout(() => { window.print(); toast('Test print sent!', 'success'); }, 80);
+  window.print();
+  toast('Test print sent!', 'success');
 }
 
 // ══════════════════════════════════════════════════════
@@ -1733,7 +1748,10 @@ function printHistoryOrder() {
     customerPhone: o.customerPhone || ''
   };
   document.getElementById('printArea').innerHTML = buildPrintHTML(printOrder);
-  setTimeout(() => { window.print(); toast('Print dialog opened', 'success'); }, 80);
+  waitForImages(document.getElementById('printArea')).then(() => {
+    window.print();
+    toast('Print dialog opened', 'success');
+  });
 }
 
 // ══════════════════════════════════════════════════════
